@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Personagem Norseland</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="character-sheet">
+
+        <div class="column left-column">
+            <div class="header-title">
+                <h1>Norseland</h1>
+                <p>--- Character Sheet ---</p>
+            </div>
+        </div>
+
+        <div class="column middle-column">
+            </div>
+
+        <div class="column right-column">
+            </div>
+
+        <div class="column left-column">
+            <div class="character-name-container">
+                <input type="text" id="character-name" placeholder="Character Name">
+            </div>
+            
+        </div>
+        <div class="basic-info-container">
+            <div class="info-row" style="margin-bottom: 0px;">
+                <label for="level" style="margin-left: 160px;">Level:</label>
+                <input type="text" id="level" style="text-align: center; font-weight: bold;">
+            </div>
+            <div class="info-row">
+                <label for="class">Class:</label>
+                <input type="text" id="class">
+            </div>
+            <div class="info-row">
+                <label for="background">Background:</label>
+                <input type="text" id="background">
+            </div>
+        </div>
+        <div class="vitality-container">
+            <h2>Vitality</h2>
+            <div class="health-mana-row">
+                <div class="stat-box" style="position: absolute; left: 48px;">
+                    <label for="hp">HP</label>
+                    <input type="number" id="hp" placeholder="HP">
+                    <input type="number" id="hpM" placeholder="Max" style="margin-top: 10px;font-size: 15px; border-top: 1px solid #7a6c5f;">
+                </div>
+                <div class="stat-box" style="position: absolute; left: 195px;">
+                    <label for="mana">Mana</label>
+                    <input type="number" id="mana" placeholder="Mana">
+                    <input type="number" id="manaM" placeholder="Max" style="margin-top: 10px;font-size: 15px; border-top: 1px solid #7a6c5f;">
+                </div>
+                <div class="stat-box" style="position: absolute; left: 48px; top: 220px;">
+                    <label for="toughness" style="font-size: 15px;">Toughness</label>
+                    <input type="text" id="toughness" placeholder="T">
+                </div>
+                <div class="stat-box" style="position: absolute; left: 195px; top: 220px;">
+                    <label for="armor-save" style="font-size: 15px;">Armor Save</label>
+                    <input type="text" id="armor-save" placeholder="SV">
+                </div>
+            </div>
+        </div>
+        <div class="combat-attributes-container">
+            <h3>Combat Attributes</h3>
+            <div class="info-row">
+                <label for="initiative">Initiative:</label>
+                <input type="text" id="initiative">
+            </div>
+            <div class="info-row">
+                <label for="movement">Movement:</label>
+                <input type="text" id="movement">
+            </div>
+        </div>
+        <!--<div class="weapons-container">
+            <h2>Weapons</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Name</th>
+                        <th>WS</th>
+                        <th>STR</th>
+                        <th>A</th>
+                        <th>AP</th>
+                        <th>D</th>
+                        <th>Ty</th>
+                        <th>R</th>
+                        <th>KW</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>-->
+        <div class="weapons-container">
+            <h2>Arsenal</h2>
+            <div class="hand-slots-container">
+                <div class="info-row">
+                    <label for="right-hand">Right Hand:</label>
+                    <input type="text" id="right-hand">
+                </div>
+                <div class="info-row">
+                    <label for="left-hand">Left Hand:</label>
+                    <input type="text" id="left-hand">
+                </div>
+            </div>
+
+            <div class="weapon-slots-container">
+                <div class="equipment-item weapon-item">
+                    <input type="text" class="equipment-name" placeholder="Primary Weapon">
+                    <div class="stats-grid">
+                        <div class="grid-box"><label>WS</label><input type="text"></div>
+                        <div class="grid-box"><label>STR</label><input type="text"></div>
+                        <div class="grid-box"><label>A</label><input type="text"></div>
+                        <div class="grid-box"><label>AP</label><input type="text"></div>
+                        <div class="grid-box"><label>D</label><input type="text"></div>
+                    </div>
+                    <input type="text" class="equipment-details" placeholder="Type, Range, Keywords...">
+                </div>
+                <div class="equipment-item weapon-item">
+                    <input type="text" class="equipment-name" placeholder="Secondary Weapon">
+                    <div class="stats-grid">
+                        <div class="grid-box"><label>WS</label><input type="text"></div>
+                        <div class="grid-box"><label>STR</label><input type="text"></div>
+                        <div class="grid-box"><label>A</label><input type="text"></div>
+                        <div class="grid-box"><label>AP</label><input type="text"></div>
+                        <div class="grid-box"><label>D</label><input type="text"></div>
+                    </div>
+                    <input type="text" class="equipment-details" placeholder="Type, Range, Keywords...">
+                </div>
+            </div>
+        </div>
+        <!-- Middle Column-->
+        <div class="middle-column" style="position: absolute; left: 33.3%; width: 33.4%; height: 1040px; top: 96px;">
+            <div class="abilities-container">
+                <h2>Feats & Class abilities</h2>
+                <textarea placeholder="Write here your feats and class abilities..."></textarea>
+            </div>
+
+            <div class="defenses-container">
+                <h2>Defenses</h2>
+                <div class="defenses-row">
+                    <div class="stat-box">
+                        <label for="physical-defense" style="margin-left: 5px;">Physical</label>
+                        <input type="number" id="physical-defense" style="margin-left: 5px;">
+                    </div>
+                    <div class="stat-box">
+                        <label for="mental-defense" style="margin-left: -10px;">Mental</label>
+                        <input type="number" id="mental-defense" style="margin-left: -10px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-container">
+                <div class="essential-skills">
+                    <h3>Essential Skills</h3>
+                    <div class="skill-group">
+                        <div class="skill-box">
+                            <label for="percepcao">Perception</label>
+                            <input type="text" id="percepcao" class="skill-value">
+                            <div class="radio-selector">
+                                <input type="radio" id="percepcao-primary" name="awareness-group" value="primary">
+                                <label for="percepcao-primary">Primary</label>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <label for="discernimento">Discernment</label>
+                            <input type="text" id="discernimento" class="skill-value">
+                            <div class="radio-selector">
+                                <input type="radio" id="discernimento-primary" name="awareness-group" value="primary">
+                                <label for="discernimento-primary">Primary</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-box">
+                            <label for="diplomacia">Diplomacy</label>
+                            <input type="text" id="diplomacia" class="skill-value">
+                            <div class="radio-selector">
+                                <input type="radio" id="diplomacia-primary" name="social-group" value="primary">
+                                <label for="diplomacia-primary">Primary</label>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <label for="intimidacao">Intimidation</label>
+                            <input type="text" id="intimidacao" class="skill-value">
+                            <div class="radio-selector">
+                                <input type="radio" id="intimidacao-primary" name="social-group" value="primary">
+                                <label for="intimidacao-primary">Primary</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="background-skills">
+                    <h3>Background Skills</h3>
+                    <div class="background-skill-row">
+                        <input type="text" placeholder="Skill Name" class="skill-name-input">
+                        <input type="text" placeholder="Value" class="skill-value-input">
+                        <div class="radio-selector">
+                            <input type="radio" id="bg1-primary" name="bg-skill-1" value="primary">
+                            <label for="bg1-primary">Primary</label>
+                        </div>
+                        <div class="radio-selector">
+                            <input type="radio" id="bg1-secondary" name="bg-skill-1" value="secondary">
+                            <label for="bg1-secondary">Secondary</label>
+                        </div>
+                    </div>
+                    <div class="background-skill-row">
+                        <input type="text" placeholder="Skill Name" class="skill-name-input">
+                        <input type="text" placeholder="Value" class="skill-value-input">
+                        <div class="radio-selector">
+                            <input type="radio" id="bg2-primary" name="bg-skill-2" value="primary">
+                            <label for="bg2-primary">Primary</label>
+                        </div>
+                        <div class="radio-selector">
+                            <input type="radio" id="bg2-secondary" name="bg-skill-2" value="secondary">
+                            <label for="bg2-secondary">Secondary</label>
+                        </div>
+                    </div>
+                    <div class="background-skill-row">
+                        <input type="text" placeholder="Skill Name" class="skill-name-input">
+                        <input type="text" placeholder="Value" class="skill-value-input">
+                        <div class="radio-selector">
+                            <input type="radio" id="bg3-primary" name="bg-skill-3" value="primary">
+                            <label for="bg3-primary">Primary</label>
+                        </div>
+                        <div class="radio-selector">
+                            <input type="radio" id="bg3-secondary" name="bg-skill-3" value="secondary">
+                            <label for="bg3-secondary">Secondary</label>
+                        </div>
+                    </div>
+                    <div class="background-skill-row">
+                        <input type="text" placeholder="Skill Name" class="skill-name-input">
+                        <input type="text" placeholder="Value" class="skill-value-input">
+                        <div class="radio-selector">
+                            <input type="radio" id="bg4-primary" name="bg-skill-4" value="primary">
+                            <label for="bg4-primary">Primary</label>
+                        </div>
+                        <div class="radio-selector">
+                            <input type="radio" id="bg4-secondary" name="bg-skill-4" value="secondary">
+                            <label for="bg4-secondary">Secondary</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column-->
+        <div class="right-column" style="position: absolute; left: 66.7%; width: 33.4%; height: 1040px; top: 96px;">
+            <div class="right-column-container">
+                <div class="armor-section">
+                    <h3 style="margin-bottom: 20px;">Armor</h3>
+                    <div class="equipment-item">
+                        <input type="text" class="equipment-name" placeholder="Armor Name 1">
+                        <div class="stats-grid">
+                            <div class="grid-box">
+                                <label>T</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>Sv</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>In</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>MV</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>Dur.</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <input type="text" class="equipment-details" placeholder="Resistance, Weakness, Keywords...">
+                    </div>
+                    <div class="equipment-item">
+                        <input type="text" class="equipment-name" placeholder="Armor Name 2">
+                        <div class="stats-grid">
+                            <div class="grid-box">
+                                <label>T</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>Sv</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>In</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>MV</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>Dur.</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <input type="text" class="equipment-details" placeholder="Resistance, Weakness, Keywords...">
+                    </div>
+                </div>
+
+                <div class="shield-section">
+                    <h3>Shield</h3>
+                    <div class="equipment-item">
+                        <input type="text" class="equipment-name" placeholder="Shield Name">
+                        <div class="stats-grid shield-grid">
+                            <div class="grid-box">
+                                <label>Sv</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>T</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>Mv</label>
+                                <input type="text">
+                            </div>
+                            <div class="grid-box">
+                                <label>Dur.</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <input type="text" class="equipment-details" placeholder="Keywords...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-container">
+                <h3 style="margin-top: 0px;">Inventory</h3>
+                <textarea placeholder="List your items here..."></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

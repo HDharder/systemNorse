@@ -1,0 +1,595 @@
+/* Remove margens e preenchimentos padrão do navegador */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif; /* Uma fonte básica para começar */
+    background-color: #333; /* Cor de fundo caso a imagem não carregue */
+}
+
+/* Estilos para o contentor principal da ficha */
+.character-sheet {
+    /* Define o tamanho da ficha para ser igual ao da imagem */
+    width: 1167px; /* Largura da sua imagem */
+    height: 1167px; /* Altura da sua imagem */
+
+    /* Define a imagem de fundo */
+    background-image: url('sytemNorseSheet.png');
+    background-size: cover; /* Faz a imagem cobrir todo o contentor */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+
+    /* Permite posicionar elementos filhos (como as colunas) de forma absoluta dentro dele */
+    position: relative;
+    
+    /* Centraliza a ficha na página */
+    margin: 20px auto;
+}
+
+/* Estilos para o título na coluna da esquerda */
+.header-title {
+    /* Posição absoluta em relação ao .character-sheet */
+    position: absolute;
+    top: 94px;  /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    text-align: center;
+    width: 389px; /* Largura da área do título */
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Times New Roman', serif; /* Uma fonte mais temática */
+    color: #4a3f35; /* Cor escura, semelhante à da borda */
+}
+
+.header-title p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #4a3f35;
+    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+}
+
+/* Estilos para o campo de nome do personagem */
+.character-name-container {
+    position: absolute;
+    top: 180px; /* Distância do topo - Ajuste conforme necessário */
+    left: 80px;  /* Distância da esquerda - Ajuste conforme necessário */
+    width: 250px; /* Largura do campo */
+}
+
+.character-name-container input {
+    width: 100%;
+    background-color: transparent; /* Fundo transparente para se misturar com a imagem */
+    border: none; /* Remove a borda padrão do campo de texto */
+    border-bottom: 1px solid #7a6c5f; /* Adiciona uma linha subtil em baixo */
+    
+    /* Estilos da fonte */
+    font-size: 24px;
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    text-align: center; /* Centraliza o texto digitado */
+}
+
+/* Remove o anel de foco que aparece ao clicar no campo */
+.character-name-container input:focus {
+    outline: none;
+}
+
+/* Altera a cor do texto do placeholder */
+.character-name-container input::placeholder {
+    color: #9a8c7f;
+    opacity: 0.8; /* Torna o placeholder um pouco mais transparente */
+}
+
+
+/* Estilos para os campos de Classe e Background */
+.basic-info-container {
+    position: absolute;
+    top: 232px; /* Distância do topo - Ajuste conforme necessário */
+    left: 85px;  /* Distância da esquerda - Ajuste conforme necessário */
+    width: 250px; /* Largura total do contentor */
+}
+
+.info-row {
+    display: flex; /* Alinha o rótulo e o campo de texto na mesma linha */
+    align-items: center; /* Centraliza verticalmente os itens na linha */
+    margin-bottom: 10px; /* Espaço entre a linha da Classe e a do Background */
+}
+
+.info-row label {
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    font-size: 18px;
+    font-weight: bold; /* Deixa o texto do rótulo em negrito */
+    margin-right: 10px; /* Espaço entre o rótulo e o campo de texto */
+    flex-shrink: 0; /* Impede que o texto do rótulo encolha */
+}
+
+.info-row input {
+    width: 100%; /* Faz o campo de texto ocupar o resto do espaço */
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #7a6c5f; /* Linha inferior para preenchimento */
+    font-size: 16px;
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+}
+
+.info-row input:focus {
+    outline: none; /* Remove o contorno azul ao clicar */
+}
+
+
+/* Estilos para a secção de Vitalidade */
+.vitality-container {
+    position: absolute;
+    top: 310px; /* Distância do topo - Ajuste conforme necessário */
+    left: 45px;   /* Distância da esquerda - Ajuste conforme necessário */
+    width: 320px; /* Largura total do contentor */
+    text-align: center; /* Centraliza todo o texto dentro deste contentor */
+}
+
+.vitality-container h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    color: #4a3f35;
+    margin-bottom: 30px; /* Espaço entre o título e os campos */
+}
+
+.health-mana-row {
+    display: flex; /* A magia para alinhar os campos lado a lado! */
+    justify-content: space-around; /* Distribui o espaço igualmente à volta dos itens */
+}
+
+.stat-box {
+    width: 25%; /* Define que cada caixa (HP e Mana) ocupa 25% do espaço da linha */
+}
+
+.stat-box label {
+    display: block; /* Faz o rótulo ocupar a sua própria linha */
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Pequeno espaço entre o rótulo e o campo de input */
+}
+
+.stat-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    text-align: center; /* Centraliza o número digitado */
+}
+
+.stat-box input:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* Estilos para a secção de Atributos de Combate */
+.combat-attributes-container {
+    position: absolute;
+    top: 600px;  /* Distância do topo - Ajuste conforme necessário */
+    left: 65px;    /* Distância da esquerda - Ajuste conforme necessário */
+    width: 280px;  /* Largura total do contentor */
+}
+
+.combat-attributes-container h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    color: #4a3f35;
+    text-align: center;
+    margin-bottom: 15px; /* Espaço entre o título e os campos */
+    font-weight: bold;
+}
+
+
+/* Estilos para a secção de Armas */
+.weapons-container {
+    position: absolute;
+    top: 730px;   /* Distância do topo - Ajuste conforme necessário */
+    left: 5.3%; /* Distância da esquerda para começar na segunda coluna */
+    width: 25%; /* Largura da tabela - Ajuste conforme necessário */
+}
+
+.weapons-container h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    color: #4a3f35;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* ESTILOS PARA A SECÇÃO DE ARMAS REFEITA */
+.hand-slots-container {
+    background-color: rgba(239, 235, 229, 0.1);
+    border: 1px solid #c9c1b9;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+/* Deixa o input da mão um pouco mais estilizado */
+.hand-slots-container input {
+    border: none;
+    border-bottom: 1px solid #7a6c5f;
+    background: transparent;
+    font-size: 16px;
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    width: 100%;
+}
+.hand-slots-container input:focus {
+    outline: none;
+}
+
+/* Ajustes para o bloco de arma ser mais compacto */
+.weapon-item {
+    padding: 4px; /* Menos padding para ser mais compacto */
+    margin-bottom: 5px; /* Menos margem */
+}
+
+.weapon-item .stats-grid {
+    /* A regra .stats-grid que já existe com 5 colunas vai funcionar perfeitamente aqui! */
+    gap: 5px; /* Menos espaço entre os quadrados */
+}
+
+
+/* Estilos para a secção de Talentos e Habilidades */
+.abilities-container {
+    position: absolute;
+    top: -10px;  /* Distância do topo - Ajuste conforme necessário */
+    left: 10%; /* Mesma distância da esquerda da tabela de armas para alinhar */
+    width: 80%;  /* Mesma largura da tabela de armas */
+}
+
+.abilities-container h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px; /* Um pouco menor que o título principal da secção */
+    color: #4a3f35;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.abilities-container textarea {
+    width: 100%; /* Ocupa toda a largura do contentor */
+    height: 380px; /* Altura da caixa de texto - Ajuste conforme necessário */
+    
+    /* Estilos para integrar com o fundo */
+    background-color: transparent;/*rgba(239, 235, 229, 0.5); /* Um fundo semi-transparente que imita o papel */
+    border: 0px solid #7a6c5f; /* Borda subtil a condizer com a tabela */
+    border-radius: 3px; /* Cantos ligeiramente arredondados */
+    
+    /* Estilos de fonte */
+    padding: 10px;
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    font-size: 16px;
+    
+    /* Outras propriedades */
+    resize: none; /* Impede o utilizador de redimensionar a caixa de texto */
+    box-sizing: border-box; /* Garante que o padding não aumenta a largura total */
+}
+
+.abilities-container textarea:focus {
+    outline: none;
+    border: 1px solid #4a3f35; /* Destaca a borda quando a caixa está selecionada */
+}
+
+/* Estiliza o texto do placeholder */
+.abilities-container textarea::placeholder {
+    color: #9a8c7f;
+    opacity: 0.8;
+}
+
+/* Estilos para a secção de Defesas */
+.defenses-container {
+    position: absolute;
+    top: 46.5%;  /* Distância do topo - Ajuste conforme necessário */
+    left: 10%; /* Mesma distância da esquerda das outras secções para alinhar */
+    width: 80%;  /* Mesma largura das outras secções */
+    text-align: center;
+}
+
+.defenses-container h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    color: #4a3f35;
+    margin-bottom: 8px;
+}
+
+/* Ajuste no rótulo para nomes mais compridos */
+.defenses-container .stat-box label {
+    font-size: 16px; /* Reduz um pouco o tamanho da fonte para caber melhor */
+}
+
+.defenses-row {
+    display: flex; /* A magia para alinhar os campos lado a lado! */
+    justify-content: space-around; /* Distribui o espaço igualmente à volta dos itens */
+}
+
+
+/* Estilos para a secção de Perícias */
+.skills-container {
+    position: absolute;
+    top: 65%; /* Distância do topo - Ajuste conforme necessário */
+    left: 10%;
+    width: 80%;
+}
+
+.skills-container h3 {
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Estilos das Perícias Essenciais */
+.skill-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
+
+.skill-box {
+    width: 33%;
+    text-align: center;
+    background-color: rgba(239, 235, 229, 0.1);
+    border: 1px solid #c9c1b9;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.skill-box label {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #4a3f35;
+}
+
+.skill-box .skill-value {
+    width: 50%;
+    margin: 5px auto 5px auto; /* auto nas laterais para centralizar */
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #7a6c5f;
+    font-size: 18px;
+    text-align: center;
+    color: #4a3f35;
+}
+.skill-box .skill-value:focus {
+    outline: none;
+}
+
+.skill-box .skill-name-input {
+    width: 100%;
+    margin: 5px auto 10px auto; /* auto nas laterais para centralizar */
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #4a3f35;
+}
+.skill-box .skill-name-input:focus {
+    outline: none;
+}
+
+/* Estilos para os Botões de Rádio */
+.radio-selector {
+    display: inline-flex; /* Alinha o botão e o texto */
+    align-items: center;
+    margin: 0 0px; /* Espaçamento */
+}
+
+.radio-selector label {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.radio-selector input[type="radio"] {
+    cursor: pointer;
+}
+
+
+/* Estilos das Perícias de Background */
+.background-skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.background-skill-row .skill-name-input {
+    width: 40%;
+    border: none;
+    border-bottom: 1px solid #7a6c5f;
+    background: transparent;
+    padding: 0px;
+    font-family: 'Times New Roman', serif;
+    font-size: 15px;
+    color: #4a3f35;
+}
+
+.background-skill-row .skill-value-input {
+    width: 15%;
+    border: none;
+    border-bottom: 1px solid #7a6c5f;
+    background: transparent;
+    padding: 0px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    color: #4a3f35;
+}
+
+.background-skill-row input:focus {
+    outline: none;
+}
+
+
+/* Estilos para a Coluna da Direita */
+.right-column-container {
+    position: absolute;
+    top: 10px;   /* Distância do topo - Ajuste conforme necessário */
+    left: 8%; /* Distância da esquerda para a coluna direita */
+    width: 74%; /* Largura da coluna - Ajuste conforme necessário */
+    padding: 10px;
+    text-align: center;
+}
+
+.right-column-container h3 {
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.equipment-item {
+    margin-bottom: 5px;
+    background-color: rgba(239, 235, 229, 0.1);
+    border: 1px solid #c9c1b9;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.equipment-name {
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #7a6c5f;
+    background: transparent;
+    padding: 0px;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    color: #4a3f35;
+    font-weight: bold;
+}
+
+.equipment-details {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #7a6c5f;
+    background: transparent;
+    padding: 0px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    color: #4a3f35;
+}
+
+.equipment-name:focus, .equipment-details:focus {
+    outline: none;
+}
+
+/* Grelha de "Quadrados" para os Atributos */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Cria 5 colunas de tamanho igual */
+    gap: 10px; /* Espaço entre os quadrados */
+}
+
+/* Grelha específica para o escudo com 4 colunas */
+.shield-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-box {
+    border: 1px solid #7a6c5f;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+.grid-box label {
+    display: block;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a3f35;
+}
+
+.grid-box input {
+    width: 80%;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 18px;
+    color: #4a3f35;
+    margin-top: 2px;
+}
+
+.grid-box input:focus {
+    outline: none;
+}
+
+
+/* NOVO: Estilos para a Secção de Inventário */
+.inventory-container {
+    position: absolute;
+    top: 51%; /* Adiciona um espaço entre a secção do escudo e o inventário */
+    left: 8%;
+    width: 74%; /* Largura da coluna - Ajuste conforme necessário */
+    padding: 10px;
+}
+
+.inventory-container h3 {
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.inventory-container textarea {
+    width: 100%; /* Ocupa toda a largura do contentor */
+    height: 400px; /* Altura da caixa de texto - Ajuste conforme necessário */
+    
+    /* Estilos para integrar com o fundo */
+    background-color: transparent;/*rgba(239, 235, 229, 0.5); /* Um fundo semi-transparente que imita o papel */
+    border: 0px solid #7a6c5f; /* Borda subtil a condizer com a tabela */
+    border-radius: 3px; /* Cantos ligeiramente arredondados */
+    
+    /* Estilos de fonte */
+    padding: 10px;
+    font-family: 'Times New Roman', serif;
+    color: #4a3f35;
+    font-size: 16px;
+    
+    /* Outras propriedades */
+    resize: none; /* Impede o utilizador de redimensionar a caixa de texto */
+    box-sizing: border-box; /* Garante que o padding não aumenta a largura total */
+}
+
+.inventory-container textarea:focus {
+    outline: none;
+    border: 1px solid #4a3f35;
+}
+
+.inventory-container textarea::placeholder {
+    color: #9a8c7f;
+    opacity: 0.8;
+}
